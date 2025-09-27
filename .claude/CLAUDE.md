@@ -1,4 +1,4 @@
-# Claude Code Guidelines for Python/FastAPI & TypeScript/Next.js
+# Universal Coding Guidelines for Claude Code
 
 ## Core Principles (All Projects)
 
