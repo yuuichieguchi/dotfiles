@@ -138,7 +138,7 @@ src/
 - Mixing business logic with framework code
 - Missing error handling
 - Hardcoded values instead of configuration
-- Writing comments for self (do NOT include self-reminders, TODOs, or implementation notes in parentheses) - write comments for human readers only
+- Writing comments for self (do NOT include self-reminders, TODOs, implementation notes in parentheses, or obvious code explanations) - write meaningful comments for human readers only
 
 ### Python Anti-Patterns
 - Using `any` type annotations
