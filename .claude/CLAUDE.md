@@ -1,5 +1,34 @@
 # Universal Coding Guidelines for Claude Code
 
+## Available Subagents and Workflow
+
+**Pre-implementation agents:**
+- `@spec-writer`: Clarify vague requirements into detailed specs
+- `@architect`: Design system architecture before coding
+- `@task-planner`: Break down into actionable tasks
+
+**Implementation agents:**
+- `@test-runner`: Execute tests and update test code
+- `@debugger`: Fix production code bugs
+- `@code-reviewer`: Review code quality
+
+**Mandatory triggers:**
+- For vague requests → `@spec-writer` → `@architect` → `@task-planner`
+- For complex features → `@architect` → `@task-planner` → You implement
+- After @task-planner → You implement tasks in order → `@test-runner`
+- After implementation → `@test-runner`
+- Test failures from bugs → `@debugger` → `@test-runner`
+- All tests pass → `@code-reviewer`
+
+**Standard workflow:**
+User request → `@spec-writer` → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer` → Response to user
+
+**Exception: Documentation-only changes:**
+- Changes to comments/README/docs → You implement → `@code-reviewer`
+- ANY code changes → Use standard workflow
+
+---
+
 ## Core Principles (All Projects)
 
 **MUST** rules are enforced by CI; **SHOULD** rules are strongly recommended.
@@ -15,18 +44,7 @@
 
 ### 2 — Universal Code Quality
 - **C-1 (MUST)** Follow TDD: write failing test → implement → refactor
-- **C-2 (MUST)** Use descriptive function names that explain WHAT the function does
-  ```
-  # ✅ Good - describes the action
-  calculate_user_subscription_cost()
-  validateEmailFormat()
-  fetchUserProfile()
-  
-  # ❌ Bad - describes changes or improvements  
-  faster_calculation()
-  improved_validation()
-  new_user_handler()  // too vague
-  ```
+- **C-2 (MUST)** Use descriptive function names explaining WHAT it does (e.g., `calculate_cost()` not `improved_calc()` or `new_handler()`)
 - **C-3 (MUST)** Use strict type hints/annotations - avoid `any` in TS, use type hints in Python
 - **C-4 (SHOULD)** Prefer pure functions when possible
 - **C-5 (MUST)** Keep functions/components under 50 lines (Python) / 200 lines (React); extract if longer
@@ -39,6 +57,7 @@
 - **T-3 (SHOULD)** Test user interactions and behavior, not implementation details
 - **T-4 (MUST)** Mock external dependencies (databases, APIs, file systems)
 - **T-5 (MUST)** When modifying existing code, ALWAYS update corresponding tests and documentation
+- **T-6 (MUST)** Use existing test files - add tests to them, never create duplicates
 
 ### 4 — Code Organization
 - **O-1 (MUST)** Use absolute imports

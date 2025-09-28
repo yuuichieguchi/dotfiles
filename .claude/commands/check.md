@@ -1,4 +1,4 @@
-Review the code as a senior developer:
+Read CLAUDE.md for universal coding rules, then review the code as a senior developer:
 
 - Are names descriptive (not "improved" or "faster")?
 - Is type safety maintained?

@@ -1,4 +1,4 @@
-Implement or modify the feature with:
+Read CLAUDE.md for universal coding rules, then implement or modify the feature with:
 
 1. Proper type hints/annotations
 2. Comprehensive test coverage
