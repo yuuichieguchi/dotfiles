@@ -6,7 +6,7 @@
 
 **Agents:**
 - Pre: `@spec-writer`, `@architect`, `@task-planner`
-- Specialists: `@azure-speech-specialist`, `@algo-specialist` (MUST consult when using their technology)
+- Specialists: `@azure-speech-specialist`, `@algo-specialist`, `@react-specialist`, `@fastapi-specialist` (MUST consult when using their technology)
 - Post: `@test-runner`, `@debugger`, `@code-reviewer`
 
 **Required workflows:**
@@ -19,6 +19,7 @@
 
 **Rules:**
 - ALL code requires full workflow
+- Consult ALL relevant specialists (e.g., FastAPI + Azure → both specialists)
 - Max 4000 tokens per agent response
 - Test failures → `@debugger` → `@test-runner`
 
