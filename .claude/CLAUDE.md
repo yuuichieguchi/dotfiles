@@ -9,7 +9,7 @@
 - Specialists: `@azure-speech-specialist`, `@algo-specialist` (MUST consult when using their technology)
 - Post: `@test-runner`, `@debugger`, `@code-reviewer`
 
-**Workflow:**
+**Required workflows:**
 1. Code changes: `@spec-writer` → `@architect` (MUST consult specialist if exists for tech) → `@task-planner` → You implement (MUST consult specialist if exists for tech) → `@test-runner` → `@code-reviewer`
 2. Docs only: Edit → `@code-reviewer`
 
