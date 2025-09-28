@@ -2,8 +2,10 @@
 
 ## Available Subagents and Workflow
 
+### ⚠️ MANDATORY: Use Subagents for ALL Code Changes - NO EXCEPTIONS
+
 **Pre-implementation agents:**
-- `@spec-writer`: Clarify vague requirements into detailed specs
+- `@spec-writer`: Clarify requirements (even if they seem clear)
 - `@architect`: Design system architecture before coding
 - `@task-planner`: Break down into actionable tasks
 
@@ -12,20 +14,19 @@
 - `@debugger`: Fix production code bugs
 - `@code-reviewer`: Review code quality
 
-**Mandatory triggers:**
-- For vague requests → `@spec-writer` → `@architect` → `@task-planner`
-- For complex features → `@architect` → `@task-planner` → You implement
-- After @task-planner → You implement tasks in order → `@test-runner`
-- After implementation → `@test-runner`
-- Test failures from bugs → `@debugger` → `@test-runner`
-- All tests pass → `@code-reviewer`
+**Required workflows:**
 
-**Standard workflow:**
-User request → `@spec-writer` → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer` → Response to user
+1. **Standard (ALL code changes):**
+   User request → `@spec-writer` → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer`
 
-**Exception: Documentation-only changes:**
-- Changes to comments/README/docs → You implement → `@code-reviewer`
-- ANY code changes → Use standard workflow
+2. **Documentation-only:**
+   Changes to README/comments → You implement → `@code-reviewer`
+
+**Enforcement:**
+- ANY code changes require FULL workflow (no matter how "simple")
+- Skipping subagents = Rule violation
+- "Clear requirements" or "simple change" are NOT valid reasons to skip
+- Test failures from bugs → `@debugger` → `@test-runner` → continue workflow
 
 ---
 
