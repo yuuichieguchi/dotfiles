@@ -9,7 +9,7 @@
 - `@architect`: Design system architecture before coding
 - `@task-planner`: Break down into actionable tasks
 
-**Domain specialists:** Consult BEFORE @architect when using:
+**Domain specialists:** MUST consult BEFORE @architect when using their technology:
 - `@azure-speech-specialist`: Azure Speech SDK (checks official docs)
 
 **Implementation agents:**
@@ -20,7 +20,7 @@
 **Required workflows:**
 
 1. **Standard (ALL code changes):**
-   User request → `@spec-writer` → [Specialist if needed] → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer`
+   User request → `@spec-writer` → [Domain specialist if their tech is used] → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer`
 
 2. **Documentation-only:**
    Changes to README/comments → You implement → `@code-reviewer`
