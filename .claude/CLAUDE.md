@@ -2,35 +2,25 @@
 
 ## Available Subagents and Workflow
 
-### ⚠️ MANDATORY: Use Subagents for ALL Code Changes - NO EXCEPTIONS
+### ⚠️ MANDATORY: Use Subagents for ALL Code Changes
 
-**Pre-implementation agents:**
-- `@spec-writer`: Clarify requirements (even if they seem clear)
-- `@architect`: Design system architecture before coding
-- `@task-planner`: Break down into actionable tasks
+**Agents:**
+- Pre: `@spec-writer`, `@architect`, `@task-planner`
+- Specialists: `@azure-speech-specialist`, `@algo-specialist` (MUST consult when using their technology)
+- Post: `@test-runner`, `@debugger`, `@code-reviewer`
 
-**Domain specialists:** MUST consult BEFORE @architect and DURING implementation when their technology is used:
-- `@azure-speech-specialist`: Azure Speech SDK (checks official docs)
-- `@algo-specialist`: Competitive programming & algorithm design
+**Workflow:**
+1. Code changes: `@spec-writer` → `@architect` (MUST consult specialist if exists for tech) → `@task-planner` → You implement (MUST consult specialist if exists for tech) → `@test-runner` → `@code-reviewer`
+2. Docs only: Edit → `@code-reviewer`
 
-**Implementation agents:**
-- `@test-runner`: Execute tests and update test code
-- `@debugger`: Fix production code bugs
-- `@code-reviewer`: Review code quality
-
-**Required workflows:**
-
-1. **Standard (ALL code changes):**
-   User request → `@spec-writer` → [Domain specialist if their tech is used] → `@architect` → `@task-planner` → You implement (consult domain specialist if their tech is used) → `@test-runner` → `@code-reviewer`
-
-2. **Documentation-only:**
-   Changes to README/comments → You implement → `@code-reviewer`
+**Parallel execution:**
+- Start next phase as soon as partial specs ready
+- Process independent features simultaneously
 
 **Rules:**
-- ANY code changes require FULL workflow
-- ALL agents: Max 4000 tokens per response (break large tasks into subtasks)
-- Skipping subagents = Rule violation
-- Test failures → `@debugger` → `@test-runner` → continue
+- ALL code requires full workflow
+- Max 4000 tokens per agent response
+- Test failures → `@debugger` → `@test-runner`
 
 ---
 
