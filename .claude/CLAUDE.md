@@ -20,7 +20,7 @@
 **Required workflows:**
 
 1. **Standard (ALL code changes):**
-   User request → `@spec-writer` → [Domain specialist if their tech is used] → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer`
+   User request → `@spec-writer` → [Domain specialist if their tech is used] → `@architect` → `@task-planner` → [Domain specialist implements if available, else You implement] → `@test-runner` → `@code-reviewer`
 
 2. **Documentation-only:**
    Changes to README/comments → You implement → `@code-reviewer`
