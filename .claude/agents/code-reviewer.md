@@ -45,6 +45,10 @@ Fix:
   cursor.execute(query, (username,))
 ```
 
+Token Management
+- Stay under 4000 tokens per response
+- Break large tasks into subtasks
+
 After review is complete:
 - If issues found → return to Claude Code for fixes
 - If approved → review process complete, return to Claude Code for final response to user

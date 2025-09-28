@@ -9,6 +9,9 @@
 - `@architect`: Design system architecture before coding
 - `@task-planner`: Break down into actionable tasks
 
+**Domain specialists:** Consult BEFORE @architect when using:
+- `@azure-speech-specialist`: Azure Speech SDK (checks official docs)
+
 **Implementation agents:**
 - `@test-runner`: Execute tests and update test code
 - `@debugger`: Fix production code bugs
@@ -17,16 +20,16 @@
 **Required workflows:**
 
 1. **Standard (ALL code changes):**
-   User request → `@spec-writer` → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer`
+   User request → `@spec-writer` → [Specialist if needed] → `@architect` → `@task-planner` → You implement → `@test-runner` → `@code-reviewer`
 
 2. **Documentation-only:**
    Changes to README/comments → You implement → `@code-reviewer`
 
-**Enforcement:**
-- ANY code changes require FULL workflow (no matter how "simple")
+**Rules:**
+- ANY code changes require FULL workflow
+- ALL agents: Max 4000 tokens per response (break large tasks into subtasks)
 - Skipping subagents = Rule violation
-- "Clear requirements" or "simple change" are NOT valid reasons to skip
-- Test failures from bugs → `@debugger` → `@test-runner` → continue workflow
+- Test failures → `@debugger` → `@test-runner` → continue
 
 ---
 

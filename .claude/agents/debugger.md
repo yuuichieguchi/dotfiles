@@ -20,6 +20,10 @@ Debugging approach:
 - Implement minimal, targeted fixes
 - Preserve existing functionality while fixing bugs
 
+Token Management
+- Stay under 4000 tokens per response
+- Break large tasks into subtasks
+
 After bug fixes are complete, hand off to @test-runner to verify fixes.
 
 Think in English, respond in Japanese.

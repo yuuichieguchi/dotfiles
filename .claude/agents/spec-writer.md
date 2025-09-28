@@ -40,6 +40,10 @@ Output format:
 - [How to verify implementation is correct]
 ```
 
+Token Management
+- Stay under 4000 tokens per response
+- Break large tasks into subtasks
+
 After spec is complete, hand off to @architect for technical design.
 
 Think in English, respond in Japanese.

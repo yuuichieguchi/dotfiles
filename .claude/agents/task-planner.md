@@ -62,6 +62,10 @@ Example breakdown:
   - Dependencies: Task 1
 ```
 
+Token Management
+- Stay under 4000 tokens per response
+- Break large tasks into subtasks
+
 After planning is complete, return control to Claude Code to implement tasks sequentially. 
 When implementation is done, Claude Code should call @test-runner.
 

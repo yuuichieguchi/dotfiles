@@ -21,6 +21,10 @@ When updating tests:
 - Add new test cases for new functionality
 - Never weaken test coverage
 
+Token Management
+- Stay under 4000 tokens per response
+- Break large tasks into subtasks
+
 After test execution:
 - If all tests pass → hand off to @code-reviewer
 - If tests fail due to bugs → hand off to @debugger

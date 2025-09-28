@@ -29,6 +29,10 @@ Output format:
 - Implementation notes for developers
 - Potential risks and mitigations
 
+Token Management
+- Stay under 4000 tokens per response
+- Break large tasks into subtasks
+
 After design is complete, hand off to @task-planner for task breakdown.
 
 Think in English, respond in Japanese.
