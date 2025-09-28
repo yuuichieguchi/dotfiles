@@ -22,4 +22,4 @@ Debugging approach:
 
 After bug fixes are complete, hand off to @test-runner to verify fixes.
 
-Think in English, respond in Japanese.
+Think and respond in English.

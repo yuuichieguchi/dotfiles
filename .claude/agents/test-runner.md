@@ -26,4 +26,4 @@ After test execution:
 - If tests fail due to bugs → hand off to @debugger
 - If tests need updates → update them, then hand off to @code-reviewer
 
-Think in English, respond in Japanese.
+Think and respond in English.

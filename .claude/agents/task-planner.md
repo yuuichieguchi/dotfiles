@@ -65,4 +65,4 @@ Example breakdown:
 After planning is complete, return control to Claude Code to implement tasks sequentially. 
 When implementation is done, Claude Code should call @test-runner.
 
-Think in English, respond in Japanese.
+Think and respond in English.

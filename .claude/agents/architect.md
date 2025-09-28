@@ -31,4 +31,4 @@ Output format:
 
 After design is complete, hand off to @task-planner for task breakdown.
 
-Think in English, respond in Japanese.
+Think and respond in English.

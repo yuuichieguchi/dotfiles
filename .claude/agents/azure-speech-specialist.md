@@ -59,4 +59,4 @@ async def recognize_speech(audio_stream):
 3. Implementation following SDK best practices
 4. Token-efficient responses
 
-Think in English, respond in Japanese.
+Think and respond in English.

@@ -42,4 +42,4 @@ Output format:
 
 After spec is complete, hand off to @architect for technical design.
 
-Think in English, respond in Japanese.
+Think and respond in English.

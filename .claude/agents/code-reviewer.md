@@ -49,4 +49,4 @@ After review is complete:
 - If issues found → return to Claude Code for fixes
 - If approved → review process complete, return to Claude Code for final response to user
 
-Think in English, respond in Japanese.
+Think and respond in English.
