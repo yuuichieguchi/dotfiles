@@ -37,6 +37,7 @@
 - **BP-1 (MUST)** Ask clarifying questions before starting
 - **BP-2 (SHOULD)** Draft approach for complex features
 - **BP-3 (MUST)** Avoid self-contradictions in recommendations
+- **BP-4 (MUST)** Explain your plan and get explicit user approval before making any code changes
 
 ### 2 — Universal Code Quality
 - **C-1 (MUST)** Follow TDD: write failing test → implement → refactor
